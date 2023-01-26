@@ -1,0 +1,85 @@
+
+
+*{
+  cursor:none;
+}
+
+:root {
+    --cellwidth: 20;
+    --cellheight: 30;
+    --revealColor: black;
+    --strokeCol: transparent;
+}
+
+#cursorChar{
+  text-shadow: 0px 0px 4px var(--revealColor);
+  color:transparent;
+  /* font-size: var(--cellheight); */
+  font-size: 40px;
+  top:auto;
+  left:auto;
+  position: fixed;
+  z-index: 10;
+  /* animation: hushVapox both; */
+}
+.hushVaporReset{
+  animation: hushVapor 14s;
+  animation-fill-mode: both;
+
+}
+
+
+.bgImage{
+  z-index: -10;
+  position: fixed;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+}
+.hideToggle{
+  z-index: -10;
+  visibility: hidden;
+}
+
+.charContainer {
+  display: grid;
+  margin:0;
+  padding:0;
+  grid-template-columns: repeat(auto-fill, var(--cellwidth));
+  /* grid-template-rows: repeat(auto-fill, var(--cellheight)); */
+  background-color: transparent;
+}
+
+.singleChar{
+  /* background-color: darkblue; */
+  /* border: 2px dotted rgba(255, 0, 0, 0.3); */
+  color: transparent;
+  text-shadow: none;
+  font-weight: 60;
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-size: var(--cellheight);
+  -webkit-text-stroke: transparent;
+  /* var(--strokeCol); */
+}
+
+body{
+  background-position: center center;
+  background-color: black;
+  color:var(--revealColor);
+  font-family: STFangsong;
+  padding:0;
+  margin: 0;
+}
+
+@keyframes hushVapor {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes hushVaporReset {
+  0%   {opacity: 1;}
+  /* 100% {opacity: 1;} */
+}
