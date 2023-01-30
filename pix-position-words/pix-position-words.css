@@ -1,0 +1,62 @@
+
+:root{
+    --newWindowW: 10;
+    --newWindowH: 8;
+    --curDialogueX: 10;
+    --curDialogueY: 8;
+    --curDialogueW: 10;
+    --curDialogueH: 8;
+
+    --curSize: 20;
+}
+
+body{
+    background-color: transparent;
+}
+
+.gridContainer{
+    grid-template-columns: repeat(auto-fill, var(--curSize));
+}
+
+.curContainer
+{
+    margin: none;
+    padding: none;
+    position: fixed;
+    width:auto;
+    height: auto;
+    top:auto;
+    left:auto;
+    background-color: yellow;
+    font:monospace;
+    font-size: 2vh;
+    color:black;
+    text-align:center center;
+
+}
+
+#curDialogue{
+    background-color: transparent;
+    color: black;
+    padding:none;
+    margin:none;
+    position: fixed;
+    top: var(--curDialogueY);
+    left: var(--curDialogueX);
+    width: var(--curDialogueW);
+    height: var(--curDialogueH);
+    z-index: 10;
+    overflow: auto scroll;
+    scroll-behavior: smooth; /* <-- for smooth scroll */
+}
+
+#newWindow{
+    /* background-color: green; */
+    margin: none;
+    padding: none;
+    width: var(--newWindowW);
+    height: auto;
+    position:fixed;
+    left: -3vw; /* cursor @ top left corner*/
+    top: -3vh; /* cursor @ top left corner*/
+}
